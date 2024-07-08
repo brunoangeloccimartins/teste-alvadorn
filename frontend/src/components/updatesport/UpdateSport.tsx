@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './UpdateSport.css';
 
 const UpdateSport: React.FC = () => {
+  const [sportId, setSportId] = useState<number | null>(null);
   const [sportName, setSportName] = useState('');
   const [sport, setSport] = useState({
+    id: 0,
     name: '',
     description: '',
     country: '',
@@ -22,6 +24,8 @@ const UpdateSport: React.FC = () => {
 
       const data = await response.json();
       setSport(data);
+      setSportId(data.id);
+      console.log('Sport found:', data);
       setSearched(true);
     } catch (error) {
       console.error('Error fetching sport:', error);
@@ -32,10 +36,14 @@ const UpdateSport: React.FC = () => {
   const handleUpdateSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (sportId === null) {
+      return;
+    }
+
     try {
       console.log('Updating sport with data:', sport);
 
-      const response = await fetch(`http://localhost:3000/sports/${sport.name}`, {
+      const response = await fetch(`http://localhost:3000/sports/${sportId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +57,8 @@ const UpdateSport: React.FC = () => {
 
       alert('Sport updated successfully');
       setSportName('');
-      setSport({ name: '', description: '', country: '', players: 0 });
+      setSport({ id: 0, name: '', description: '', country: '', players: 0 });
+      setSportId(null);
       setSearched(false);
     } catch (error) {
       console.error('Error updating sport:', error);
@@ -83,7 +92,7 @@ const UpdateSport: React.FC = () => {
           <button type='submit'>Buscar</button>
         </form>
 
-        {searched && sport.name ? (
+        {searched && sport.id ? (
           <form onSubmit={handleUpdateSubmit}>
             <label htmlFor='name'>Nome</label>
             <input

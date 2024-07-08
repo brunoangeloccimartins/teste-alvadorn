@@ -9,6 +9,6 @@ router.post("/sports", (req, res) => {
 router.get("/sports", getAllSports);
 router.get("/sports/findsport/:name", findSportByName);
 router.delete("/sports/:name", deleteSport);
-router.put("/sports/:name", updateSport);
+router.put("/sports/:id", updateSport);
 
 export default router;

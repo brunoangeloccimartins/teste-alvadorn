@@ -49,18 +49,19 @@ export const findSportByName = async (req: Request, res: Response) => {
 
 export const updateSport = async (req: Request, res: Response) => {
   try {
-    const { name } = req.params;
-    const { description, country, players } = req.body;
+    const { id } = req.params;
+    const { name, description, country, players } = req.body;
 
-    console.log('Received data for update:', { description, country, players });
+    console.log('Received data for update:', { id, name, description, country, players });
 
     if (typeof players !== 'number' || isNaN(players)) {
       return res.status(400).json({ error: 'Invalid number of players' });
     }
 
-    const sport = await Sport.findOne({ where: { name } });
+    const sport = await Sport.findByPk(id);
 
     if (sport) {
+      sport.name = name;
       sport.description = description;
       sport.country = country;
       sport.players = players;
