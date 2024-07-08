@@ -1,4 +1,4 @@
-# Projeto Fullstack em TypeScript com Docker, Express, Sequelize, CSS e React
+# Projeto Fullstack como teste para Alvadorn
 
 Bem-vindo ao repositório do projeto! Este projeto é uma aplicação fullstack desenvolvida utilizando TypeScript, Docker, Express, Sequelize, CSS e React. 
 
@@ -45,4 +45,4 @@ Para configurar o ambiente e iniciar a aplicação, siga os passos abaixo:
    docker-compose up -d
 
 ```markdown
-5. Acesse a aplicação em seu navegador na URL `http://localhost:3000`.
+5. Acesse a aplicação em seu navegador na URL `http://localhost:3001`.
