@@ -1,0 +1,49 @@
+
+
+.getonesportcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.getonesportcontainer h2 {
+    margin-bottom: 20px;
+}
+
+.getonesportcontainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.getonesportcontainer form label {
+    margin-bottom: 10px;
+}
+
+.getonesportcontainer form input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.getonesportcontainer form button {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.getonesportcontainer form button:hover {
+    background-color: #ccc;
+}
+
+.resultcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}

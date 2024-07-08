@@ -1,0 +1,28 @@
+
+
+.addsportcontainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  
+}
+
+.addsportcontainer form input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addsportcontainer form button {
+  padding: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.addsportcontainer form button:hover {
+  background-color: #ccc;
+}

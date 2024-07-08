@@ -1,0 +1,44 @@
+
+
+.SideBar main {
+  background-color: #282c34;
+  min-height: 100vh;
+  max-width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: fixed;
+
+}
+
+.SideBar header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.SideBar li {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 10px;
+  font-size: 20px;
+  width: 100%;
+  
+}
+
+.SideBar {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  
+}

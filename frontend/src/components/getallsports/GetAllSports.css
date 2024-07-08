@@ -1,0 +1,36 @@
+
+
+.getallsportscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.getallsportscontainer table thead {
+  background-color: #ccc;
+  
+}
+
+.getallsportscontainer table tbody tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.getallsportscontainer table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.getallsportscontainer table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.getallsportscontainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.getallsportscontainer table th, td {
+  padding: 10px;
+  text-align: left;
+}
+
